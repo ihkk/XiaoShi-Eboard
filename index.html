@@ -30,141 +30,225 @@
 
     <div class="container tect-center">
         <div class="row">
-            <p>在下面输入好网址后，点左边的按钮 不需要加http(s)</p>
+            <div class="alert alert-primary" role="alert">
+                在下面输入好网址后，点左边的按钮 不需要加http(s)
+            </div>
+            <div class="alert alert-danger" role="alert">
+                注：无法输入中文,但百度搜索输入拼音后会自动纠正
+            </div>
         </div>
         <div class="row">
-            <form action="点右边的按钮" method="get" onsubmit="os(this)"> <!--这里的input ID 为con， 是后面小键盘键入的内容-->
-                <!-- <input type="text" id='con' size="0.001" hidden> -->
-                网址：http://<input id="txtNum" type="text" size="100" /><input type="submit">
-            </form>
-        </div>
-        <div class="row">
-            <p>虚拟键盘♪(･ω･)ﾉ 注：无法输入中文,但百度搜索输入拼音后会自动纠正</p>
+            <div class="row align-items-center">
+                <div class="col-auto"><label for="txtNum" class="col-form-label">网址：http://</label></div>
+                <div class="col-auto">
+                    <form action="点右边的按钮" method="get" onsubmit="os(this)"> <!--这里的input ID 为con， 是后面小键盘键入的内容-->
+                        <input id="txtNum" type="text" size="90%" class=" form-control">
+                </div>
+                <div class="col-auto"><input type="submit" class="btn btn-secondary" value="访问"></div>
+                </form>
+            </div>
         </div>
     </div>
 
     <div class="container tect-center">
         <div class="row">
+            <!-- 字母 -->
             <div class="col">
-                <table>
-                    <tr>
-                        <td><input id="ButtonBDsearch" type="button" value="百度搜索"
-                                onclick="return btnNum_onclick('www.baidu.com/#ie=&wd=')"></td>
+                <!-- 快捷键 -->
+                <div class="row">
+                    <div class="col">
+                        <input id="ButtonBDsearch" class="btn btn-outline-primary" type="button" value="百度搜索"
+                            onclick="return btnNum_onclick('www.baidu.com/#ie=&wd=')">
 
-                        <br> <!--翻译快捷键-->
-                        <p>英译中翻译工具，点击按钮后直接输入英文并点上面的 Submit 按钮</p>
+                        <!--翻译快捷键-->
 
-                        <td><input id="ButtonClear" type="button" value="清空全部" onclick="return clearText()"></td>
-                        <td><input id="ButtonBDtranslate1" type="button" value="百度翻译"
-                                onclick="return btnNum_onclick('fanyi.baidu.com/#en/zh/')"></td>
-                        <td><input id="ButtonGGtranslate1" type="button" value="Google Translate"
-                                onclick="return btnNum_onclick('translate.google.cn/#en/zh-CN/')">
-                        </td>
-                        <br>
-                    </tr>
-                </table>
+                        <input id="ButtonBDtranslate1" class="btn btn-outline-success" type="button" value="百度翻译"
+                            onclick="return btnNum_onclick('fanyi.baidu.com/#en/zh/')">
+                        <input id="ButtonGGtranslate1" class="btn btn-outline-success" type="button"
+                            value="Google Translate" onclick="return btnNum_onclick('translate.google.cn/#en/zh-CN/')">
+
+                        <input id="ButtonClear" class="btn btn-outline-danger" type="button" value="清空全部"
+                            onclick="return clearText()">
+
+                    </div>
+                </div>
+
+                <!-- q-p -->
+                <div class="row">
+                    <div class="col">
+                        <input id="Buttonq" class="btn btn-outline-secondary" type="button" value="q"
+                            onclick="return btnNum_onclick('q')" />
+                        <input id="Buttonw" class="btn btn-outline-secondary" type="button" value="w"
+                            onclick="return btnNum_onclick('w')" />
+                        <input id="Buttone" class="btn btn-outline-secondary" type="button" value="e"
+                            onclick="return btnNum_onclick('e')" />
+                        <input id="Buttonr" class="btn btn-outline-secondary" type="button" value="r"
+                            onclick="return btnNum_onclick('r')" />
+                        <input id="Buttont" class="btn btn-outline-secondary" type="button" value="t"
+                            onclick="return btnNum_onclick('t')" />
+                        <input id="Buttony" class="btn btn-outline-secondary" type="button" value="y"
+                            onclick="return btnNum_onclick('y')" />
+                        <input id="Buttonu" class="btn btn-outline-secondary" type="button" value="u"
+                            onclick="return btnNum_onclick('u')" />
+
+                        <input id="Buttoni" class="btn btn-outline-secondary" type="button" value="i"
+                            onclick="return btnNum_onclick('i')" />
+                        <input id="Buttono" class="btn btn-outline-secondary" type="button" value="o"
+                            onclick="return btnNum_onclick('o')" />
+                        <input id="Buttonp" class="btn btn-outline-secondary" type="button" value="p"
+                            onclick="return btnNum_onclick('p')" />
+                        <input id="Button+" class="btn btn-outline-secondary" type="button" value="+"
+                            onclick="return btnNum_onclick('+')" />
+                        <input id="Button-" class="btn btn-outline-secondary" type="button" value="-"
+                            onclick="return btnNum_onclick('-')" />
+                        <input id="Button=" class="btn btn-outline-secondary" type="button" value="="
+                            onclick="return btnNum_onclick('=')" />
+                        <input id="ButtonDel" class="btn btn-outline-danger" type="button" value="退格"
+                            onclick="return delText()" />
+                    </div>
+                </div>
+
+                <!-- a-l -->
+                <div class="row">
+                    <div class="col">
+                        <input id="Buttona" class="btn btn-outline-secondary" type="button" value="a"
+                            onclick="return btnNum_onclick('a')" />
+                        <input id="Buttons" class="btn btn-outline-secondary" type="button" value="s"
+                            onclick="return btnNum_onclick('s')" />
+                        <input id="Buttond" class="btn btn-outline-secondary" type="button" value="d"
+                            onclick="return btnNum_onclick('d')" />
+                        <input id="Buttonf" class="btn btn-outline-secondary" type="button" value="f"
+                            onclick="return btnNum_onclick('f')" />
+                        <input id="Buttong" class="btn btn-outline-secondary" type="button" value="g"
+                            onclick="return btnNum_onclick('g')" />
+                        <input id="Buttonh" class="btn btn-outline-secondary" type="button" value="h"
+                            onclick="return btnNum_onclick('h')" />
+                        <input id="Buttonj" class="btn btn-outline-secondary" type="button" value="j"
+                            onclick="return btnNum_onclick('j')" />
+                        <input id="Buttonk" class="btn btn-outline-secondary" type="button" value="k"
+                            onclick="return btnNum_onclick('k')" />
+                        <input id="Buttonl" class="btn btn-outline-secondary" type="button" value="l"
+                            onclick="return btnNum_onclick('l')" />
+                        <input id="Button;" class="btn btn-outline-secondary" type="button" value=";"
+                            onclick="return btnNum_onclick(';')" />
+                        <input id="Button:" class="btn btn-outline-secondary" type="button" value=":"
+                            onclick="return btnNum_onclick(':')" />
+                        <input id="Button'" class="btn btn-outline-secondary" type="button" value="'"
+                            onclick="return btnNum_onclick('\'')" />
+                    </div>
+                </div>
+
+                <!-- z-m -->
+                <div class="row">
+                    <div class="col">
+                        <input id="Buttonz" class="btn btn-outline-secondary" type="button" value="z"
+                            onclick="return btnNum_onclick('z')" />
+
+                        <input id="Buttonx" class="btn btn-outline-secondary" type="button" value="x"
+                            onclick="return btnNum_onclick('x')" />
+                        <input id="Buttonc" class="btn btn-outline-secondary" type="button" value="c"
+                            onclick="return btnNum_onclick('c')" />
+                        <input id="Buttonv" class="btn btn-outline-secondary" type="button" value="v"
+                            onclick="return btnNum_onclick('v')" />
+                        <input id="Buttonb" class="btn btn-outline-secondary" type="button" value="b"
+                            onclick="return btnNum_onclick('b')" />
+                        <input id="Buttonn" class="btn btn-outline-secondary" type="button" value="n"
+                            onclick="return btnNum_onclick('n')" />
+                        <input id="Buttonm" class="btn btn-outline-secondary" type="button" value="m"
+                            onclick="return btnNum_onclick('m')" />
+                        <input id="Button," class="btn btn-outline-secondary" type="button" value=","
+                            onclick="return btnNum_onclick(',')" />
+                        <input id="ButtonDOT" class="btn btn-outline-secondary" type="button" value="."
+                            onclick="return btnNum_onclick('.')" />
+                        <input id="Button?" class="btn btn-outline-secondary" type="button" value="?"
+                            onclick="return btnNum_onclick('?')" />
+                        <input id="Button!" class="btn btn-outline-secondary" type="button" value="!"
+                            onclick="return btnNum_onclick('!')" />
+                        <input id="Buttonslash" class="btn btn-outline-secondary" type="button" value="/"
+                            onclick="return btnNum_onclick('/')" />
+
+                    </div>
+                </div>
+
+                <!-- 空格行 -->
+                <div class="row">
+                    <div class="col">
+                        <input id="Buttonwww." class="btn btn-outline-info" type="button" value="www."
+                            onclick="return btnNum_onclick('www.')" />
+
+                        <input id="Button.com" class="btn btn-outline-info" type="button" value=".com"
+                            onclick="return btnNum_onclick('.com')" />
+
+                        <input id="ButtonSpace" class="btn btn-outline-secondary" type="button" value="   空 Space 格  "
+                            onclick="return btnNum_onclick(' ')" />
+
+                        <input id="Button.net" class="btn btn-outline-info" type="button" value=".net"
+                            onclick="return btnNum_onclick('.net')" />
+
+                        <input id="Button.cn" class="btn btn-outline-info" type="button" value=".cn"
+                            onclick="return btnNum_onclick('.cn')" />
+
+                    </div>
+                </div>
+
+
             </div>
-        </div>
-        <div class="row">
-            <div class="col-7">
 
-                <table>
-                    <tr>
-                        <td><input id="Buttonq" type="button" value="q" onclick="return btnNum_onclick('q')" /></td>
-                        <td><input id="Buttonw" type="button" value="w" onclick="return btnNum_onclick('w')" /></td>
-                        <td><input id="Buttone" type="button" value="e" onclick="return btnNum_onclick('e')" /></td>
-                        <td><input id="Buttonr" type="button" value="r" onclick="return btnNum_onclick('r')" /></td>
-                        <td><input id="Buttont" type="button" value="t" onclick="return btnNum_onclick('t')" /></td>
-                        <td><input id="Buttony" type="button" value="y" onclick="return btnNum_onclick('y')" /></td>
-                        <td><input id="Buttonu" type="button" value="u" onclick="return btnNum_onclick('u')" /></td>
-
-                        <td><input id="Buttoni" type="button" value="i" onclick="return btnNum_onclick('i')" /></td>
-                        <td><input id="Buttono" type="button" value="o" onclick="return btnNum_onclick('o')" /></td>
-                        <td><input id="Buttonp" type="button" value="p" onclick="return btnNum_onclick('p')" /></td>
-                        <td><input id="Button+" type="button" value="+" onclick="return btnNum_onclick('+')" /></td>
-                        <td><input id="Button-" type="button" value="-" onclick="return btnNum_onclick('-')" /></td>
-                        <td><input id="Button=" type="button" value="=" onclick="return btnNum_onclick('=')" /></td>
-                        <td> <input id="ButtonDel" type="button" value="退格" onclick="return delText()" /></td>
-                        <td><input id="ButtonClear" type="button" value="清空全部" onclick="return clearText()" /></td>
-                    </tr>
-                    <tr>
-                        <td><input id="Buttona" type="button" value="a" onclick="return btnNum_onclick('a')" /></td>
-                        <td><input id="Buttons" type="button" value="s" onclick="return btnNum_onclick('s')" /></td>
-                        <td><input id="Buttond" type="button" value="d" onclick="return btnNum_onclick('d')" /></td>
-                        <td><input id="Buttonf" type="button" value="f" onclick="return btnNum_onclick('f')" /></td>
-                        <td><input id="Buttong" type="button" value="g" onclick="return btnNum_onclick('g')" /></td>
-                        <td><input id="Buttonh" type="button" value="h" onclick="return btnNum_onclick('h')" /></td>
-                        <td><input id="Buttonj" type="button" value="j" onclick="return btnNum_onclick('j')" /></td>
-                        <td><input id="Buttonk" type="button" value="k" onclick="return btnNum_onclick('k')" /></td>
-                        <td><input id="Buttonl" type="button" value="l" onclick="return btnNum_onclick('l')" /></td>
-                        <td><input id="Button;" type="button" value=";" onclick="return btnNum_onclick(';')" /></td>
-                        <td><input id="Button:" type="button" value=":" onclick="return btnNum_onclick(':')" /></td>
-                        <td><input id="Button'" type="button" value="'" onclick="return btnNum_onclick('\'')" /></td>
-                    </tr>
-                    <tr>
-                        <td><input id="Buttonz" type="button" value="z" onclick="return btnNum_onclick('z')" /></td>
-
-                        <td><input id="Buttonx" type="button" value="x" onclick="return btnNum_onclick('x')" /></td>
-                        <td><input id="Buttonc" type="button" value="c" onclick="return btnNum_onclick('c')" /></td>
-                        <td><input id="Buttonv" type="button" value="v" onclick="return btnNum_onclick('v')" /></td>
-                        <td><input id="Buttonb" type="button" value="b" onclick="return btnNum_onclick('b')" /></td>
-                        <td><input id="Buttonn" type="button" value="n" onclick="return btnNum_onclick('n')" /></td>
-                        <td><input id="Buttonm" type="button" value="m" onclick="return btnNum_onclick('m')" /></td>
-                        <td><input id="Button," type="button" value="," onclick="return btnNum_onclick(',')" /></td>
-                        <td><input id="ButtonDOT" type="button" value="." onclick="return btnNum_onclick('.')" /></td>
-                        <td><input id="Button?" type="button" value="?" onclick="return btnNum_onclick('?')" /></td>
-                        <td><input id="Button!" type="button" value="!" onclick="return btnNum_onclick('!')" /></td>
-                        <td><input id="Buttonslash" type="button" value="/" onclick="return btnNum_onclick('/')" /></td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <!--网址键盘-->
-                        <td><input id="Buttonwww." type="button" value="www." onclick="return btnNum_onclick('www.')" />
-                        </td>
-                        <td><input id="Button.com" type="button" value=".com" onclick="return btnNum_onclick('.com')" />
-                        </td>
-                        <td><input id="ButtonSpace" type="button" value="   空 Space 格  "
-                                onclick="return btnNum_onclick(' ')" />
-                        </td>
-                        <td><input id="Button.net" type="button" value=".net" onclick="return btnNum_onclick('.net')" />
-                        </td>
-                        <td><input id="Button.cn" type="button" value=".cn" onclick="return btnNum_onclick('.cn')" />
-                        </td>
-                    </tr>
-                </table>
-            </div>
+            <!-- 数字 -->
             <div class="col">
-                <table>
-                    <tr> <!--数字小键盘-->
-                        <td><input id="Button1" type="button" value="1" onclick="return btnNum_onclick(1)"></td>
-                        <td><input id="Button2" type="button" value="2" onclick="return btnNum_onclick(2)"></td>
-                        <td><input id="Button3" type="button" value="3" onclick="return btnNum_onclick(3)"></td>
-                        <td><input id="ButtonDel" type="button" value="退格" onclick="return delText()"> </td>
-                    </tr>
-                    <tr>
-                        <td><input id="Button4" type="button" value="4" onclick="return btnNum_onclick(4)"></td>
-                        <td><input id="Button5" type="button" value="5" onclick="return btnNum_onclick(5)"></td>
-                        <td><input id="Button6" type="button" value="6" onclick="return btnNum_onclick(6)"></td>
-                    </tr>
-                    <tr>
-                        <td><input id="Button7" type="button" value="7" onclick="return btnNum_onclick(7)"></td>
-                        <td><input id="Button8" type="button" value="8" onclick="return btnNum_onclick(8)"></td>
-                        <td><input id="Button9" type="button" value="9" onclick="return btnNum_onclick(9)"></td>
-                    </tr>
-                    <tr>
-                        <td><input id="Button0" type="button" value="0" onclick="return btnNum_onclick(0)"></td>
-                        <td><input id="Buttonx" type="button" value="X" onclick="return btnNum_onclick('X')"></td>
-                    </tr>
-                    <!--字母键盘-->
-                </table>
+                <!-- 行1 -->
+                <div class="row">
+                    <div class="col">
+                        <input id="Button1" class="btn btn-outline-secondary" type="button" value="1"
+                            onclick="return btnNum_onclick(1)">
+                        <input id="Button2" class="btn btn-outline-secondary" type="button" value="2"
+                            onclick="return btnNum_onclick(2)">
+                        <input id="Button3" class="btn btn-outline-secondary" type="button" value="3"
+                            onclick="return btnNum_onclick(3)">
+                        <input id="ButtonDel" class="btn btn-outline-danger" type="button" value="退格"
+                            onclick="return delText()">
+                    </div>
+                </div>
+
+                <!-- 行2 -->
+                <div class="row">
+                    <div class="col">
+                        <input id="Button4" class="btn btn-outline-secondary" type="button" value="4"
+                            onclick="return btnNum_onclick(4)">
+                        <input id="Button5" class="btn btn-outline-secondary" type="button" value="5"
+                            onclick="return btnNum_onclick(5)">
+                        <input id="Button6" class="btn btn-outline-secondary" type="button" value="6"
+                            onclick="return btnNum_onclick(6)">
+                    </div>
+                </div>
+
+                <!-- 行3 -->
+                <div class="row">
+                    <div class="col">
+                        <input id="Button7" class="btn btn-outline-secondary" type="button" value="7"
+                            onclick="return btnNum_onclick(7)">
+                        <input id="Button8" class="btn btn-outline-secondary" type="button" value="8"
+                            onclick="return btnNum_onclick(8)">
+                        <input id="Button9" class="btn btn-outline-secondary" type="button" value="9"
+                            onclick="return btnNum_onclick(9)">
+                    </div>
+                </div>
+
+                <!-- 行4 -->
+                <div class="row">
+                    <div class="col">
+                        <input id="Button0" class="btn btn-outline-secondary" type="button" value="0"
+                            onclick="return btnNum_onclick(0)">
+                        <input id="Buttonx" class="btn btn-outline-secondary" type="button" value="X"
+                            onclick="return btnNum_onclick('X')">
+                        <input id="ButtonDOT" class="btn btn-outline-secondary" type="button" value="."
+                            onclick="return btnNum_onclick('.')" />
+                    </div>
+                </div>
             </div>
 
-
         </div>
-
     </div>
-
 
 
 
