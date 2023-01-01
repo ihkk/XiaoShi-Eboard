@@ -1,0 +1,40 @@
+.seperate-line {
+    margin: 30px 0px;
+}
+
+.keyboard {
+    display: flex;
+    justify-content: center;
+}
+
+
+#ButtonSpace {
+    width: 70% !important;
+}
+
+
+#num div div>.btn {
+    height: 150%;
+}
+
+#char div div>.btn {
+    height: 150%;
+}
+
+#char div div>.btn {
+    margin: 0px 2px;
+    width: 40%;
+}
+
+#num div div>.btn {
+    margin: 0px 10px;
+    width: 20%;
+}
+
+#txtNum {
+    height: 50px;
+}
+
+#char {
+    margin-bottom: 40px;
+}

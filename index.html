@@ -8,6 +8,7 @@
     <title>电子班牌网址导航</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,24 +40,24 @@
         </div>
         <div class="row">
             <div class="row align-items-center">
-                <div class="col-auto"><label for="txtNum" class="col-form-label">网址：http://</label></div>
+                <div class="col-auto"><label for="txtNum" class="col-form-label">网址：https://</label></div>
                 <div class="col-auto">
                     <form action="点右边的按钮" method="get" onsubmit="os(this)"> <!--这里的input ID 为con， 是后面小键盘键入的内容-->
-                        <input id="txtNum" type="text" size="90%" class=" form-control">
+                        <input id="txtNum" type="text" size="70%" class="form-control" autocomplete="off">
                 </div>
                 <div class="col-auto"><input type="submit" class="btn btn-secondary" value="访问"></div>
                 </form>
             </div>
         </div>
     </div>
-
+    <div class="seperate-line"></div>
     <div class="container tect-center">
         <div class="row">
             <!-- 字母 -->
-            <div class="col">
+            <div class="col-xs-12 col-md-9" id="char">
                 <!-- 快捷键 -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col keyboard">
                         <input id="ButtonBDsearch" class="btn btn-outline-primary" type="button" value="百度搜索"
                             onclick="return btnNum_onclick('www.baidu.com/#ie=&wd=')">
 
@@ -70,12 +71,17 @@
                         <input id="ButtonClear" class="btn btn-outline-danger" type="button" value="清空全部"
                             onclick="return clearText()">
 
+                        <input id="ButtonDel" class="btn btn-outline-danger" type="button" value="退格"
+                            onclick="return delText()" />
+
                     </div>
                 </div>
 
+                <div class="seperate-line"></div>
+
                 <!-- q-p -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col keyboard">
                         <input id="Buttonq" class="btn btn-outline-secondary" type="button" value="q"
                             onclick="return btnNum_onclick('q')" />
                         <input id="Buttonw" class="btn btn-outline-secondary" type="button" value="w"
@@ -103,14 +109,15 @@
                             onclick="return btnNum_onclick('-')" />
                         <input id="Button=" class="btn btn-outline-secondary" type="button" value="="
                             onclick="return btnNum_onclick('=')" />
-                        <input id="ButtonDel" class="btn btn-outline-danger" type="button" value="退格"
-                            onclick="return delText()" />
+
                     </div>
                 </div>
 
+                <div class="seperate-line"></div>
+
                 <!-- a-l -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col keyboard">
                         <input id="Buttona" class="btn btn-outline-secondary" type="button" value="a"
                             onclick="return btnNum_onclick('a')" />
                         <input id="Buttons" class="btn btn-outline-secondary" type="button" value="s"
@@ -138,9 +145,11 @@
                     </div>
                 </div>
 
+                <div class="seperate-line"></div>
+
                 <!-- z-m -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col keyboard">
                         <input id="Buttonz" class="btn btn-outline-secondary" type="button" value="z"
                             onclick="return btnNum_onclick('z')" />
 
@@ -170,9 +179,11 @@
                     </div>
                 </div>
 
+                <div class="seperate-line"></div>
+
                 <!-- 空格行 -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col keyboard">
                         <input id="Buttonwww." class="btn btn-outline-info" type="button" value="www."
                             onclick="return btnNum_onclick('www.')" />
 
@@ -195,24 +206,26 @@
             </div>
 
             <!-- 数字 -->
-            <div class="col">
+            <div class="col-xs-12 col-md-3" id="num">
                 <!-- 行1 -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col keyboard">
                         <input id="Button1" class="btn btn-outline-secondary" type="button" value="1"
                             onclick="return btnNum_onclick(1)">
                         <input id="Button2" class="btn btn-outline-secondary" type="button" value="2"
                             onclick="return btnNum_onclick(2)">
                         <input id="Button3" class="btn btn-outline-secondary" type="button" value="3"
                             onclick="return btnNum_onclick(3)">
-                        <input id="ButtonDel" class="btn btn-outline-danger" type="button" value="退格"
-                            onclick="return delText()">
+                        <!-- <input id="ButtonDel" class="btn btn-outline-danger" type="button" value="退格"
+                            onclick="return delText()"> -->
                     </div>
                 </div>
 
+                <div class="seperate-line"></div>
+
                 <!-- 行2 -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col keyboard">
                         <input id="Button4" class="btn btn-outline-secondary" type="button" value="4"
                             onclick="return btnNum_onclick(4)">
                         <input id="Button5" class="btn btn-outline-secondary" type="button" value="5"
@@ -222,9 +235,11 @@
                     </div>
                 </div>
 
+                <div class="seperate-line"></div>
+
                 <!-- 行3 -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col keyboard">
                         <input id="Button7" class="btn btn-outline-secondary" type="button" value="7"
                             onclick="return btnNum_onclick(7)">
                         <input id="Button8" class="btn btn-outline-secondary" type="button" value="8"
@@ -234,9 +249,11 @@
                     </div>
                 </div>
 
+                <div class="seperate-line"></div>
+
                 <!-- 行4 -->
                 <div class="row">
-                    <div class="col">
+                    <div class="col keyboard">
                         <input id="Button0" class="btn btn-outline-secondary" type="button" value="0"
                             onclick="return btnNum_onclick(0)">
                         <input id="Buttonx" class="btn btn-outline-secondary" type="button" value="X"
