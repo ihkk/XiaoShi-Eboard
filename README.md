@@ -1,9 +1,12 @@
 > 此项目已于2023.1.1重制。
 
 # 效实电子班牌
+## Github Pages
+你可以在 **[这里](https://ihkk.github.io/XiaoShi-Eboard/)** 查看此项目。
+<a href="https://ihkk.github.io/XiaoShi-Eboard/"><img src="https://s2.loli.net/2023/01/01/Jnu2oleG9VtI8s5.png"/></a>
 
 ## 用途
-用于XS电子班牌的「破解」，班级主页管理者在班级主页中加入 **[此项目GitHub Pages](https://ihkk.github.io/XiaoShi-Eboard/)** 的链接后，即可在班级主页上使用网页键盘进行搜索和翻译。  
+用于XS电子班牌的「破解」，班级主页管理者在班级主页中加入 **[此项目GitHub Pages](https://ihkk.github.io/XiaoShi-Eboard/)** 的外部链接后，即可在班级主页上使用网页键盘进行搜索和翻译。  
 
 ## 功能
 * 使用虚拟键盘输入，直接打开网址
