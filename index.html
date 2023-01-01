@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子班牌网址导航</title>
+</head>
+
+<body>
+    <h1>
+        电子班牌网址导航
+    </h1>
+    <a href="javascript:history.go(-1);">返回上一页</a>
+
+    <!--打开输入框中的网页-->
+    <form action="点右边的按钮" method="get" onsubmit="os(this)"> <!--这里的input ID 为con， 是后面小键盘键入的内容-->
+        <input type="text" id='con' size="0.001" hidden> <!--生成了一个表单-->
+        <input type="submit">在下面输入好网址后，点左边的按钮 不需要加http(s)
+    </form>
+
+    <script>
+        function os(e) {
+            e.action = "https://" + document.getElementById('txtNum').value;
+        }
+        function btnEnter_onclick() {
+            var value = document.getElementById("txtNum").value;
+            alert(value);
+        }
+        function btnNum_onclick(i) {
+            txtNum.value = txtNum.value + i;
+        }
+        function clearText() {
+            document.getElementById("txtNum").value = "";
+        }
+        function delText() {
+            var value = document.getElementById("txtNum").value;
+            var str = value.substring(0, value.length - 1);
+            document.getElementById("txtNum").value = str;
+        }  
+    </script>
+
+    <p style="height: 60px">
+        网址：http://<input id="txtNum" type="text" size="100" />
+        <input id="btnEnter" type="button" value="点击上面的Submit↑" onclick="return btnEnter_onclick()" hidden />
+    <p>虚拟键盘♪(･ω･)ﾉ <br>Ps：无法输入中文,但百度搜索输入拼音后会自动纠正</p>
+
+
+    <table>
+        <tr>
+            <td><input id="ButtonBDsearch" type="button" value="百度搜索"
+                    onclick="return btnNum_onclick('www.baidu.com/#ie=&wd=')"></td>
+
+            <br> <!--翻译快捷键-->
+            <p>英译中翻译工具，点击按钮后直接输入英文并点上面的 Submit 按钮</p>
+
+            <td><input id="ButtonClear" type="button" value="清空全部" onclick="return clearText()"></td>
+            <td><input id="ButtonBDtranslate1" type="button" value="百度翻译"
+                    onclick="return btnNum_onclick('fanyi.baidu.com/#en/zh/')"></td>
+            <td><input id="ButtonGGtranslate1" type="button" value="Google Translate"
+                    onclick="return btnNum_onclick('translate.google.cn/#en/zh-CN/')">
+            </td>
+            <br>
+        </tr>
+    </table>
+    <table>
+        <tr> <!--数字小键盘-->
+            <td> <input id="Button1" type="button" value="1" onclick="return btnNum_onclick(1)"> </td>
+            <td> <input id="Button2" type="button" value="2" onclick="return btnNum_onclick(2)"> </td>
+            <td> <input id="Button3" type="button" value="3" onclick="return btnNum_onclick(3)"> </td>
+            <td> <input id="ButtonDel" type="button" value="退格" onclick="return delText()"> </td>
+        </tr>
+        <tr>
+            <td> <input id="Button4" type="button" value="4" onclick="return btnNum_onclick(4)"> &nbsp;&nbsp; </td>
+            <td> <input id="Button5" type="button" value="5" onclick="return btnNum_onclick(5)"></td>
+            <td> <input id="Button6" type="button" value="6" onclick="return btnNum_onclick(6)"></td>
+        </tr>
+        <tr>
+            <td><input id="Button7" type="button" value="7" onclick="return btnNum_onclick(7)"></td>
+            <td><input id="Button8" type="button" value="8" onclick="return btnNum_onclick(8)"></td>
+            <td><input id="Button9" type="button" value="9" onclick="return btnNum_onclick(9)"></td>
+        </tr>
+        <tr>
+            <td><input id="Button0" type="button" value="0" onclick="return btnNum_onclick(0)"></td>
+            <td><input id="Buttonx" type="button" value="X" onclick="return btnNum_onclick('X')"></td>
+            <td><input id="ButtonClear" type="button" value="清空全部" onclick="return clearText()"></td>
+
+        </tr>
+        <!--字母键盘-->
+    </table>
+    <table>
+        <tr>
+            <td><input id="Buttonq" type="button" value="q" onclick="return btnNum_onclick('q')" /></td>
+            <td><input id="Buttonw" type="button" value="w" onclick="return btnNum_onclick('w')" /></td>
+            <td><input id="Buttone" type="button" value="e" onclick="return btnNum_onclick('e')" /></td>
+            <td><input id="Buttonr" type="button" value="r" onclick="return btnNum_onclick('r')" /></td>
+            <td><input id="Buttont" type="button" value="t" onclick="return btnNum_onclick('t')" /></td>
+            <td><input id="Buttony" type="button" value="y" onclick="return btnNum_onclick('y')" /></td>
+            <td><input id="Buttonu" type="button" value="u" onclick="return btnNum_onclick('u')" /></td>
+
+            <td><input id="Buttoni" type="button" value="i" onclick="return btnNum_onclick('i')" /></td>
+            <td><input id="Buttono" type="button" value="o" onclick="return btnNum_onclick('o')" /></td>
+            <td><input id="Buttonp" type="button" value="p" onclick="return btnNum_onclick('p')" /></td>
+            <td><input id="Button+" type="button" value="+" onclick="return btnNum_onclick('+')" /></td>
+            <td><input id="Button-" type="button" value="-" onclick="return btnNum_onclick('-')" /></td>
+            <td><input id="Button=" type="button" value="=" onclick="return btnNum_onclick('=')" /></td>
+            <td> <input id="ButtonDel" type="button" value="退格" onclick="return delText()" /></td>
+            <td><input id="ButtonClear" type="button" value="清空全部" onclick="return clearText()" /></td>
+        </tr>
+        <tr>
+            <td><input id="Buttona" type="button" value="a" onclick="return btnNum_onclick('a')" /></td>
+            <td><input id="Buttons" type="button" value="s" onclick="return btnNum_onclick('s')" /></td>
+            <td><input id="Buttond" type="button" value="d" onclick="return btnNum_onclick('d')" /></td>
+            <td><input id="Buttonf" type="button" value="f" onclick="return btnNum_onclick('f')" /></td>
+            <td><input id="Buttong" type="button" value="g" onclick="return btnNum_onclick('g')" /></td>
+            <td><input id="Buttonh" type="button" value="h" onclick="return btnNum_onclick('h')" /></td>
+            <td><input id="Buttonj" type="button" value="j" onclick="return btnNum_onclick('j')" /></td>
+            <td><input id="Buttonk" type="button" value="k" onclick="return btnNum_onclick('k')" /></td>
+            <td><input id="Buttonl" type="button" value="l" onclick="return btnNum_onclick('l')" /></td>
+            <td><input id="Button;" type="button" value=";" onclick="return btnNum_onclick(';')" /></td>
+            <td><input id="Button:" type="button" value=":" onclick="return btnNum_onclick(':')" /></td>
+            <td><input id="Button'" type="button" value="'" onclick="return btnNum_onclick('\'')" /></td>
+        </tr>
+        <tr>
+            <td><input id="Buttonz" type="button" value="z" onclick="return btnNum_onclick('z')" /></td>
+
+            <td><input id="Buttonx" type="button" value="x" onclick="return btnNum_onclick('x')" /></td>
+            <td><input id="Buttonc" type="button" value="c" onclick="return btnNum_onclick('c')" /></td>
+            <td><input id="Buttonv" type="button" value="v" onclick="return btnNum_onclick('v')" /></td>
+            <td><input id="Buttonb" type="button" value="b" onclick="return btnNum_onclick('b')" /></td>
+            <td><input id="Buttonn" type="button" value="n" onclick="return btnNum_onclick('n')" /></td>
+            <td><input id="Buttonm" type="button" value="m" onclick="return btnNum_onclick('m')" /></td>
+            <td><input id="Button," type="button" value="," onclick="return btnNum_onclick(',')" /></td>
+            <td><input id="ButtonDOT" type="button" value="." onclick="return btnNum_onclick('.')" /></td>
+            <td><input id="Button?" type="button" value="?" onclick="return btnNum_onclick('?')" /></td>
+            <td><input id="Button!" type="button" value="!" onclick="return btnNum_onclick('!')" /></td>
+            <td><input id="Buttonslash" type="button" value="/" onclick="return btnNum_onclick('/')" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <!--网址键盘-->
+            <td><input id="Buttonwww." type="button" value="www." onclick="return btnNum_onclick('www.')" /></td>
+            <td><input id="Button.com" type="button" value=".com" onclick="return btnNum_onclick('.com')" /></td>
+            <td><input id="ButtonSpace" type="button" value="   空 Space 格  " onclick="return btnNum_onclick(' ')" />
+            </td>
+            <td><input id="Button.net" type="button" value=".net" onclick="return btnNum_onclick('.net')" /></td>
+            <td><input id="Button.cn" type="button" value=".cn" onclick="return btnNum_onclick('.cn')" /></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
