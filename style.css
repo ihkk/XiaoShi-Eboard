@@ -10,11 +10,23 @@
 
 #ButtonSpace {
     width: 70% !important;
+    padding: 0 15%;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+#google {
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: line-through;
 }
 
 
 #num div div>.btn {
     height: 150%;
+    width: 100%;
+    margin: 0px 5px;
 }
 
 #char div div>.btn {
@@ -22,16 +34,12 @@
 }
 
 #char div div>.btn {
-    margin: 0px 2px;
+    margin: 0px 3px;
     width: 40%;
 }
 
-#num div div>.btn {
-    margin: 0px 10px;
-    width: 20%;
-}
 
-#txtNum {
+.h50 {
     height: 50px;
 }
 
