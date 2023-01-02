@@ -3,6 +3,7 @@
 # 效实电子班牌
 ## Github Pages
 你可以在 **[这里](https://ihkk.github.io/XiaoShi-Eboard/)** 查看此项目。
+
 <a href="https://ihkk.github.io/XiaoShi-Eboard/"><img src="https://s2.loli.net/2023/01/01/Jnu2oleG9VtI8s5.png"/></a>
 
 ## 用途
